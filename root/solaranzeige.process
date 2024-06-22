@@ -31,8 +31,11 @@ if [[ "${INFLUXDB}" = "yes" ]]; then
 else
   echo "Influxdb is disabled..." >> /var/www/log/solaranzeige.log
 fi
-
-service grafana-server start >> /var/www/log/solaranzeige.log
+if [[ "${GRAFANA}" = "yes" ]]; then
+  service grafana-server start >> /var/www/log/solaranzeige.log
+else
+  echo "grafana is disabled..." >> /var/www/log/solaranzeige.log
+fi
 service apache2 start >> /var/www/log/solaranzeige.log
 service cron start >> /var/www/log/solaranzeige.log
 service ssh stop
