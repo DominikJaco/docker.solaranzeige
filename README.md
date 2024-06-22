@@ -46,6 +46,7 @@ The available parameters in detail:
 | `UPDATE` | yes | yes, no | no | Turn On / Off automatic Update for Solaranzeige each restart inside this Docker |
 | `MOSQUITTO` | yes | yes, no | yes | Turn On / Off mosquitto service inside this Container |
 | `INFLUXDB` | yes | yes, no | yes | Turn On / Off influxdb service inside this Container |
+| `GRAFANA` | yes | yes, no | yes | Turn On / Off grafana service inside this Container |
 
 Frequently used volumes:
  
